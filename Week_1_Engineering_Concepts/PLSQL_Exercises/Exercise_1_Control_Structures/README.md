@@ -46,6 +46,31 @@ The bank wants to provide a **1% discount on loan interest rates** for customers
 * Customers above 60 years receive a 1% reduction in their loan interest rate.
 * Customers below or equal to 60 years remain unchanged.
 
+### Execution Screenshots
+
+##### Customers_Table
+
+<img width="1105" height="611" alt="Customers_Table" src="https://github.com/user-attachments/assets/fc1dd67a-0623-4a1c-b1c0-5c8fbc0e6a9f" />
+
+##### Loans_Table
+
+<img width="1347" height="545" alt="Loans_Table" src="https://github.com/user-attachments/assets/e6e6aecb-9e8c-4907-96b6-a34e447de34f" />
+
+##### Solution
+
+<img width="807" height="621" alt="Solution" src="https://github.com/user-attachments/assets/a1079b69-3c29-479a-967d-21b77cc58d00" />
+
+##### Output
+
+<img width="802" height="797" alt="Output" src="https://github.com/user-attachments/assets/d174f9dd-f118-4392-8673-d772877a8b40" />
+
+##### Loans_Table_After_Executing_PLSQL_Block
+
+<img width="1381" height="606" alt="Loans_Table_After_Executing_PLSQL_Block" src="https://github.com/user-attachments/assets/9e6a983b-01be-4911-81f9-944c3eea5a96" />
+
+
+
+
 ---
 
 # Scenario 2: Promote Customers to VIP Status
