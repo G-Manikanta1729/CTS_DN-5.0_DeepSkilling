@@ -98,6 +98,12 @@ Future Value after 5 years = 16105.10
 
 ---
 
+## Executed Output
+
+<img width="1482" height="281" alt="image" src="https://github.com/user-attachments/assets/39520c52-3072-44fd-8d4a-b706273cede9" />
+
+---
+
 ## Dry Run
 
 ```
