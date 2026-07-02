@@ -272,6 +272,334 @@ After completing this exercise, you will be able to:
 
 ---
 
+# Implementation
+
+This exercise demonstrates how to configure a basic Spring application using **Spring Core**, **Maven**, and **XML-based configuration**.
+
+The application consists of two simple classes:
+
+- **BookService** – Represents the Service Layer.
+- **BookRepository** – Represents the Repository Layer.
+
+Instead of creating these objects manually using the `new` keyword, Spring creates and manages them as **Beans**.
+
+---
+
+# Project Structure
+
+```
+Exercise_1_Configuring_a_Basic_Spring_Application
+│
+├── pom.xml
+├── README.md
+├── .gitignore
+│
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │
+│   │   │── com.library
+│   │   │      │
+│   │   │      ├── repository
+│   │   │      │      └── BookRepository.java
+│   │   │      │
+│   │   │      ├── service
+│   │   │      │      └── BookService.java
+│   │   │      │
+│   │   │      └── main
+│   │   │             └── LibraryManagementApplication.java
+│   │   │
+│   │   └── resources
+│   │          └── applicationContext.xml
+│   │
+│   └── test
+│
+└── Output
+```
+
+---
+
+# Step 1: Create a Maven Project
+
+A Maven project named **LibraryManagement** is created.
+
+Maven provides a standard project structure and automatically downloads the required libraries from the Maven Repository.
+
+Project Name:
+
+```
+LibraryManagement
+```
+
+---
+
+# Step 2: Add Spring Dependency
+
+The Spring Framework dependency is added to the **pom.xml** file.
+
+```xml
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-context</artifactId>
+    <version>6.1.8</version>
+</dependency>
+```
+
+### Purpose
+
+This dependency provides:
+
+- Spring IoC Container
+- Bean Management
+- ApplicationContext
+- XML Configuration Support
+
+Without this dependency, the application cannot use Spring Framework features.
+
+---
+
+# Step 3: Create the Repository Class
+
+Package:
+
+```
+com.library.repository
+```
+
+Class:
+
+```
+BookRepository.java
+```
+
+```java
+public class BookRepository {
+
+    public void displayRepository() {
+        System.out.println("Book Repository Bean Created Successfully.");
+    }
+
+}
+```
+
+### Purpose
+
+This class represents the **Repository Layer**.
+
+In a real Library Management System, this class would interact with the database to perform operations such as:
+
+- Add Book
+- Update Book
+- Delete Book
+- Search Book
+
+For this exercise, it simply prints a message to verify that Spring has successfully created the Bean.
+
+---
+
+# Step 4: Create the Service Class
+
+Package:
+
+```
+com.library.service
+```
+
+Class:
+
+```
+BookService.java
+```
+
+```java
+public class BookService {
+
+    public void displayService() {
+        System.out.println("Book Service Bean Created Successfully.");
+    }
+
+}
+```
+
+### Purpose
+
+This class represents the **Service Layer**.
+
+In real-world applications, the Service Layer contains the business logic.
+
+Examples:
+
+- Validate book details
+- Calculate fines
+- Issue books
+- Return books
+
+For this exercise, it simply prints a message indicating that the Service Bean has been created successfully.
+
+---
+
+# Step 5: Configure Spring Beans
+
+Inside
+
+```
+src/main/resources
+```
+
+create
+
+```
+applicationContext.xml
+```
+
+Example:
+
+```xml
+<bean id="bookRepository"
+      class="com.library.repository.BookRepository"/>
+
+<bean id="bookService"
+      class="com.library.service.BookService"/>
+```
+
+### Purpose
+
+This XML file is the configuration file for the Spring Framework.
+
+It tells Spring:
+
+- Which classes should be managed.
+- Which objects should be created.
+- What names (Bean IDs) should be assigned to those objects.
+
+When the application starts, Spring reads this file and creates all the configured Beans automatically.
+
+---
+
+# Step 6: Create the Main Class
+
+Package:
+
+```
+com.library.main
+```
+
+Class:
+
+```
+LibraryManagementApplication.java
+```
+
+The main class is responsible for starting the Spring application.
+
+It performs the following tasks:
+
+1. Loads the Spring Configuration File.
+2. Starts the Spring IoC Container.
+3. Creates all configured Beans.
+4. Retrieves the required Beans.
+5. Calls the methods of the Beans.
+
+Example:
+
+```java
+ApplicationContext context =
+new ClassPathXmlApplicationContext("applicationContext.xml");
+
+BookService service =
+context.getBean("bookService", BookService.class);
+
+BookRepository repository =
+context.getBean("bookRepository", BookRepository.class);
+
+service.displayService();
+repository.displayRepository();
+```
+
+### Purpose
+
+Instead of writing:
+
+```java
+BookService service = new BookService();
+```
+
+the application requests the object from Spring.
+
+This demonstrates the concept of **Inversion of Control (IoC)**.
+
+---
+
+# Execution Flow
+
+The following steps occur when the application is executed:
+
+```
+Application Starts
+        │
+        ▼
+applicationContext.xml is Loaded
+        │
+        ▼
+Spring IoC Container Starts
+        │
+        ▼
+BookRepository Bean is Created
+        │
+        ▼
+BookService Bean is Created
+        │
+        ▼
+Beans are Stored in the Container
+        │
+        ▼
+Application Requests Beans
+        │
+        ▼
+Spring Returns the Beans
+        │
+        ▼
+Methods are Executed
+        │
+        ▼
+Output is Displayed
+```
+
+---
+
+# Expected Output
+
+```
+Book Service Bean Created Successfully.
+
+Book Repository Bean Created Successfully.
+```
+
+---
+
 # Executed Output
 
 <img width="1732" height="958" alt="Output" src="https://github.com/user-attachments/assets/f5c8d793-a47b-4b50-9cee-e0fa6f88555b" />
+
+---
+
+# Key Learnings
+
+After completing this exercise, you have learned:
+
+- How to create a Maven project.
+- How to add Spring dependencies.
+- How to configure Spring using XML.
+- How to create Spring Beans.
+- How the Spring IoC Container works.
+- How to use `ApplicationContext`.
+- How to retrieve Beans using `getBean()`.
+- The difference between creating objects manually and letting Spring manage them.
+
+---
+
+# Conclusion
+
+This exercise serves as the foundation for learning the Spring Framework. It demonstrates how Spring simplifies Java application development by managing object creation through the IoC Container.
+
+Understanding this exercise is essential because the same concepts are used in advanced Spring technologies such as **Spring Boot**, **Spring MVC**, **Spring Data JPA**, **Spring Security**, and **Microservices**. Mastering these fundamentals will make it much easier to learn and build enterprise-level Java applications.
