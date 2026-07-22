@@ -634,6 +634,18 @@ Capture the following:
 
 ---
 
+# Outputs:
+
+## Browser Output
+
+<img width="1368" height="605" alt="image" src="https://github.com/user-attachments/assets/8a58f663-2a0b-48c6-8392-9fae6550e99c" />
+
+## Console Output
+
+<img width="1917" height="870" alt="image" src="https://github.com/user-attachments/assets/bb0b44fc-2046-4cca-a3c7-7b03c718b1ef" />
+
+---
+
 # Conclusion
 
 This exercise serves as the entry point into React development. By installing the required tools, creating a React project, understanding its folder structure, modifying the main component, and running the application successfully, you build the foundation needed for all upcoming React hands-on exercises. The concepts introduced here—SPA, components, JSX, and the Virtual DOM—are fundamental to developing modern, efficient, and maintainable React applications.
