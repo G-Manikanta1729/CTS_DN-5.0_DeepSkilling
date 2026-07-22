@@ -1,0 +1,35 @@
+.App {
+    text-align: center;
+    margin-top: 120px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.entry-section,
+.exit-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+button {
+    background-color: #7CFC00;
+    border: 1px solid #444;
+    padding: 6px 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5fd000;
+}
+
+span {
+    font-size: 18px;
+    font-weight: bold;
+}
