@@ -1,0 +1,51 @@
+.App {
+
+  margin: 30px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+button {
+
+  padding: 6px 14px;
+
+  margin-top: 5px;
+
+  cursor: pointer;
+
+}
+
+.currency-container {
+
+  margin-top: 40px;
+
+}
+
+.currency-container h1 {
+
+  color: green;
+
+}
+
+label {
+
+  display: inline-block;
+
+  width: 90px;
+
+}
+
+input {
+
+  width: 180px;
+
+  padding: 4px;
+
+}
+
+hr {
+
+  margin: 40px 0;
+
+}
