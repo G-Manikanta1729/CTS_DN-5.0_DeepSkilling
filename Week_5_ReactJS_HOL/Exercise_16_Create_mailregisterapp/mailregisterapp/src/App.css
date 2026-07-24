@@ -1,0 +1,51 @@
+.App{
+
+  text-align:center;
+
+}
+
+.container{
+
+  width:400px;
+
+  margin:60px auto;
+
+}
+
+.container h1{
+
+  color:red;
+
+  margin-bottom:30px;
+
+}
+
+table{
+
+  margin:auto;
+
+}
+
+td{
+
+  padding:8px;
+
+  text-align:left;
+
+}
+
+input{
+
+  width:200px;
+
+  padding:5px;
+
+}
+
+button{
+
+  padding:6px 15px;
+
+  cursor:pointer;
+
+}
