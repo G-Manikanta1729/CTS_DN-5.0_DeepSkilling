@@ -1,0 +1,47 @@
+.App{
+
+    text-align:center;
+
+}
+
+.container{
+
+    width:350px;
+
+    margin:50px auto;
+
+    padding:20px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+
+    background:white;
+
+}
+
+.container img{
+
+    width:180px;
+
+    height:180px;
+
+    border-radius:50%;
+
+    margin-top:15px;
+
+}
+
+.container h1{
+
+    color:#0b6efd;
+
+}
+
+.container h2{
+
+    margin-top:20px;
+
+}
