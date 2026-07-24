@@ -1,0 +1,79 @@
+.App{
+
+  text-align:center;
+
+  padding:30px;
+
+  font-family:Arial, Helvetica, sans-serif;
+
+}
+
+.toggle-btn{
+
+  padding:12px 22px;
+
+  border:none;
+
+  border-radius:6px;
+
+  cursor:pointer;
+
+  background:#1976d2;
+
+  color:white;
+
+  margin-bottom:25px;
+
+}
+
+.employee-card{
+
+  width:320px;
+
+  margin:20px auto;
+
+  padding:20px;
+
+  border-radius:10px;
+
+  box-shadow:0 0 10px rgba(0,0,0,0.2);
+
+}
+
+.employee-card h2{
+
+  margin-bottom:10px;
+
+}
+
+.light{
+
+  background:white;
+
+  color:black;
+
+  border:2px solid black;
+
+  padding:10px 18px;
+
+  border-radius:6px;
+
+  cursor:pointer;
+
+}
+
+.dark{
+
+  background:#222;
+
+  color:white;
+
+  border:2px solid white;
+
+  padding:10px 18px;
+
+  border-radius:6px;
+
+  cursor:pointer;
+
+}
